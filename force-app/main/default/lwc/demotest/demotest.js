@@ -8,7 +8,8 @@ import { createRecord } from 'lightning/uiRecordApi';
 
 export default class Demotest extends LightningElement {
 
-     
+     //trer
+        hello;
         accountformdata={};
         
         handleChange(event){
