@@ -11,6 +11,7 @@ export default class Demotest extends LightningElement {
      //trer
         hello;
         accountformdata={};
+        //change from feature-a branch
         
         handleChange(event){
                 const{name,value}=event.target;//destructing event.target as name which is api name which we gave in html and value pair-->name:abc,annualrevenue:550000
