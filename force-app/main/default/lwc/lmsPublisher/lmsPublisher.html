@@ -1,0 +1,29 @@
+<template>
+
+        <lightning-card icon-name="standard:account" variant="base">
+          <div slot="title">
+              LMS publisher
+          </div>
+          <div slot="actions">
+        
+          </div>
+          <div slot="footer">
+        
+          </div>
+          <div>
+           <lightning-input 
+             type="text"
+             label="Enter some text"
+             onchange={handleevent}
+           ></lightning-input>
+
+           <lightning-button 
+             variant="brand"
+             label="Click to Send" 
+             onclick={handleClick} 
+           ></lightning-button>
+            
+          </div>
+        </lightning-card>
+    
+</template>

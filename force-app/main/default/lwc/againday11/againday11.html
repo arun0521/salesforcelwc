@@ -1,0 +1,20 @@
+<template>
+
+        <lightning-card title="fetch api demo">
+
+                <div class="wrapper">
+
+                <lightning-button variant="brand" label="Async demo" title="Async demo" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+
+                <template for:each={posts} for:item="post">
+
+                        <div key={post.id}>
+                                <p>{post.body}</p></br>
+                        </div>
+
+                </template>
+
+                </div>
+        </lightning-card>
+    
+</template>

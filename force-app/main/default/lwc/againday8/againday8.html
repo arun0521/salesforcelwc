@@ -1,0 +1,25 @@
+<template>
+
+    <lightning-card title="DataBinding demo">
+
+        <div class={style}>
+        test
+
+        <lightning-button label="Click me" title="Non-primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+       
+        <div class="slds-var-m-around_medium">
+
+            Welcome {name}</br>
+
+            his city is {personcity}
+        </div>
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input name="txtfirstName" type="text" label="Enter some text" onchange={handlechange}></lightning-input>
+        </div>
+
+        welcome {firstName}
+    </lightning-card>
+    
+</template>

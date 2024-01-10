@@ -1,0 +1,25 @@
+<template>
+
+        <lightning-card title="query selector demo">
+                <template for:each={employees} for:item="emp">
+
+                        <div key={emp.id}>
+                                <b>Id : {emp.id} Name : {emp.name}</b>
+
+
+                                <lightning-input type="text" data-id={emp.id}  data-empname={emp.name} label="Enter some text" value={emp.salary}></lightning-input>
+                                <lightning-button variant="brand" data-id={emp.id} data-name={emp.name} label="Select" title="Primary action" onclick={handleSelect} class="slds-m-left_x-small"></lightning-button>
+                                <lightning-button variant="brand" data-id={emp.id} label="Clear" title="Primary action" onclick={handleClear} class="slds-m-left_x-small"></lightning-button>
+                        </div>
+
+                </template>
+
+                <div slot="actions">
+                                <lightning-button variant="brand" label="Clear first" title="Primary action" onclick={handleFirstClear} class="slds-m-left_x-small"></lightning-button>
+                                <lightning-button variant="brand" label="Clear All" title="Primary action" onclick={handleAllClear} class="slds-m-left_x-small"></lightning-button>
+                </div>
+
+
+        </lightning-card>
+    
+</template>

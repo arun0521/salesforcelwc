@@ -1,0 +1,22 @@
+<template>
+        <lightning-card title="Calculator">
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+                <lightning-input type="text" name="txtinput1" label="Input#1" value={var1} onchange={handleinputone}></lightning-input>
+
+                <lightning-input type="text" name="txtinput2" label="Input#2" value={var2} onchange={handleinputtwo}></lightning-input>
+        </div>
+        <lightning-button-group class="slds-m-bottom_x-large">
+                
+                <lightning-button variant="brand" label="Add" title="Add" onclick={handleAddClick} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button variant="brand" label="Sub" title="Sub" onclick={handleAddClick} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button variant="brand" label="Mul" title="Mul" onclick={handleAddClick} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button variant="brand" label="Div" title="Div" onclick={handleAddClick} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button variant="brand" label="Clear" title="Clear" onclick={handleClearClick} class="slds-m-left_x-small"></lightning-button>
+        </lightning-button-group>
+
+        <div class="slds-m-around_medium">
+                Output: {output}
+        </div>
+        </lightning-card>
+    
+</template>

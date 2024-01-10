@@ -1,0 +1,47 @@
+<template>
+        <lightning-card icon-name="standard:account" variant="base">
+          <div slot="title">
+             Update Record
+          </div>
+          <div>
+            <!-- Card Body  -->
+            <lightning-input 
+              type="text"
+              label="Record Id"
+              onchange={handlechange}
+              name="Id"
+            ></lightning-input>
+
+            <lightning-input 
+            type="text"
+            label="Name"
+            onchange={handlechange}
+            name="Name"
+          ></lightning-input>
+
+        <lightning-combobox
+          name="Industry"
+          label="Industry"
+          value={value}
+          placeholder="Select Industry"
+          options={IndustryOptions}
+          onchange={handlecmbChange} 
+        ></lightning-combobox>
+
+        <lightning-input 
+        type="text"
+        label="Annual Revenue"
+        onchange={handlechange}
+        name="AnnualRevenue"
+      ></lightning-input>
+
+      <lightning-button 
+        variant="brand"
+        label="Save" 
+        onclick={handleClick} 
+      ></lightning-button>
+            
+          </div>
+        </lightning-card>
+    
+</template>

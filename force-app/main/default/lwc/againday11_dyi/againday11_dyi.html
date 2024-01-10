@@ -1,0 +1,45 @@
+<template>
+
+        <lightning-card title="student database">
+                
+
+
+                <template if:true={flag}>
+                        <div slot="footer">
+                                <lightning-input type="text" label="Enter student info" onchange={handlechange}></lightning-input>
+                                <lightning-button variant="brand" label="search"  onclick={handlesearch}  class="slds-m-left_x-small"></lightning-button>
+                        </div>
+                        <template for:each={studentInfo} for:item="student">
+                                <div class="slds-grid" key={student.id}>
+                                        <div class="slds-col slds-size_8-of-12 slds-border_bottom">
+                                                <p>Name : {student.name}</p></br>
+                                                <p>Email : {student.email}</p></br>                              
+                                        </div>
+                                </div>
+        
+                        </template>
+
+                </template>
+
+                <template if:false={flag}>
+                        <div slot="footer">
+                                
+                                <lightning-button variant="brand" label="Next"  onclick={handleNext}  class="slds-m-left_x-small"></lightning-button>
+                                <lightning-button variant="brand" label="Previous"  onclick={handlePrevious}  class="slds-m-left_x-small"></lightning-button>
+                        </div>
+                        <template for:each={newInfo} for:item="student">
+                                <div class="slds-grid" key={student.id}>
+                                        <div class="slds-col slds-size_8-of-12 slds-border_bottom">
+                                                <p>Name : {student.name}</p></br>
+                                                <p>Email : {student.email}</p></br>                              
+                                        </div>
+                                </div>
+        
+                        </template>
+
+                </template>
+
+               
+        </lightning-card>
+    
+</template>

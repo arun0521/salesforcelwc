@@ -1,0 +1,34 @@
+<template>
+
+        <lightning-card title="day 9 learnings">
+                
+                <lightning-input type="text" onchange={handlechange} label="Enter stock"></lightning-input>
+
+                <template if:true={flag}>
+                        <div class="slds-border_top">
+                        product name  {product.name} ,
+                        product price {product.price} , 
+                        product stock {product.stock} ,
+                </div>
+                </template>
+                <template if:false={flag}>
+                       No Products available!!
+
+                </template>
+
+                <lightning-input type="text" onchange={handleempchange} label="Enter salary amount"></lightning-input>
+               
+
+                <template for:each={empfilteredlist} for:item="emp">
+
+                        <div key={emp.name} class="slds-border_top">
+                                {emp.name}</br>
+                                {emp.salary}</br>
+                                {emp.position}</br>
+                        </div>
+
+                </template>
+               
+        </lightning-card>
+    
+</template>

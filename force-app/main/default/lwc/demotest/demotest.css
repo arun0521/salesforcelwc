@@ -1,0 +1,12 @@
+div{
+    background-color: blue;
+    color: wheat;
+}
+
+.mycustomdiv{
+    background-color: green;
+    color: wheat;
+    padding: 20px;
+    border: 5px solid red ;
+    margin: 20px;
+}

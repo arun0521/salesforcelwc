@@ -1,0 +1,26 @@
+<template>
+
+        <lightning-card icon-name="standard:account" variant="base">
+          <div slot="title">
+              LMS Accounts Subscriber
+          </div>
+          <div slot="actions">
+        
+          </div>
+          <div slot="footer">
+        
+          </div>
+          <div>
+                <template if:true={data}>
+                        <lightning-datatable
+                        key-field="id"
+                        data={data}
+                        columns={columns}
+                    ></lightning-datatable>
+                </template>
+                
+            
+          </div>
+        </lightning-card>
+    
+</template>

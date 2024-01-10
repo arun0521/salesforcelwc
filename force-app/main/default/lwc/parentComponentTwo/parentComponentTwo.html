@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="LDS" class="slds-m-around_medium">     
+        <template if:true={objectInfo}>
+
+            <P>
+                Total no of fields : {fieldcount}
+            </P>
+            <P>
+                Total no of custom fields : {customFieldCount}
+            </P>
+            <p>
+                Total record types : {recordTypeCount}
+            </p>
+            <p>
+                field api names : {allfieldsApiNames}
+            </p>
+            <p>
+                Picklist fields count : {pickListNumber}
+            </p>
+
+            <lightning-button 
+              variant="brand"
+              label="Click here" 
+              onclick={handleClick} 
+            ></lightning-button>
+          
+        </template>     
+    </lightning-card> 
+</template>

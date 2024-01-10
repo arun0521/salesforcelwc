@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="day 26">
+
+      <!--
+      <c-customdatatable  key-field="Id"  data={data}  columns={columns}></c-customdatatable>        >
+      -->
+
+      <c-custompicklist key-field="Id"  data={getAccountsData}  columns={columns}></c-custompicklist>
+
+      <!--
+        <lightning-datatable
+        key-field="Id"
+        data={getAccountsData}
+        columns={columns}
+        onsave={handleSave} 
+        draft-values={saveDraftValues}
+        onrowaction={handleRowAction}>
+      </lightning-datatable>
+      -->
+    </lightning-card>
+</template>

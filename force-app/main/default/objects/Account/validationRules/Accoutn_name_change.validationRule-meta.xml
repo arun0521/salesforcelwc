@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accoutn_name_change</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISCHANGED( Name )  &amp;&amp;  ISPICKVAL( Type , &apos;Customer - Direct&apos;)  ||  ISPICKVAL( Type , &apos;Customer - Channel&apos;)</errorConditionFormula>
+    <errorMessage>Account Name cannot be changed for  Customer Direct and Customer Channel</errorMessage>
+</ValidationRule>

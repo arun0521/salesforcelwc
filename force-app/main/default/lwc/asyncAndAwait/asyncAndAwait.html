@@ -1,0 +1,15 @@
+<template>
+
+    <lightning-card title='Sync and Await'>
+            <lightning-button label="Click here" variant="brand" onclick={HandleClick}></lightning-button>
+
+            <lightning-input label="enter name" class="fName" onclick={handleInput} ></lightning-input>
+            <template for:each={Posts} for:item="Post">
+                <div key={Post.id}>
+                    {Post.body}
+                </div>
+            </template>
+
+    </lightning-card>
+    
+</template>

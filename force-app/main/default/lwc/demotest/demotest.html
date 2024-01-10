@@ -1,0 +1,27 @@
+<template>
+    
+    <lightning-card title="LDS" class="slds-m-around_medium">
+
+       <lightning-input 
+          type="text"
+          label="Account Name"
+          name="Name"
+          onchange={handleChange}
+        ></lightning-input>
+        <lightning-input 
+        type="text"
+        label="Annual Revenue"
+        name="AnnualRevenue"
+        onchange={handleChange}
+      ></lightning-input>
+
+
+       <lightning-button 
+        variant="brand"
+        label="Save" 
+        onclick={handleClick} 
+      ></lightning-button>
+    </lightning-card>
+
+
+</template>

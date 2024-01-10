@@ -1,0 +1,51 @@
+<template>
+
+        <lightning-card title="Refresh record detail page">
+
+
+                <lightning-button 
+                  variant="brand"
+                  label="click here" 
+                  onclick={handleClick}
+                 
+                ></lightning-button>
+
+
+                <div style="height: 300px;">
+
+
+                  <lightning-datatable
+                  key-field="Id"
+                  data={getAccountsData}
+                  columns={columns}
+                  onsave={handleSave} 
+                  draft-values={saveDraftValues}
+                  onrowaction={handleRowAction}>
+                </lightning-datatable>
+
+
+                <!---  <lightning-datatable
+                  key-field="id"
+                  data={getAccountsData}
+                  columns={columns}
+                  show-row-number-column="false"
+                  onrowselection={getSelectedRow}
+                  max-row-selection="2"
+                  onrowaction={handleRowAction}
+                  onsave={handleSave}
+                  draft-values={saveDraftValues}>
+                </lightning-datatable>-->
+
+              
+  
+
+                </div>
+
+               
+        </lightning-card>
+
+
+
+        
+    
+</template>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_amount_check</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( StageName , &apos;Closed Won&apos;) , Amount &gt; 100000 ,  Approved__c = false)</errorConditionFormula>
+    <errorMessage>cannot create closed won not approved  opportunity with amount greater than 100000</errorMessage>
+</ValidationRule>

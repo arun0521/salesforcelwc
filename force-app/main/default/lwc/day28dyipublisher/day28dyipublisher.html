@@ -1,0 +1,32 @@
+<template>
+
+        <lightning-card icon-name="standard:account" variant="base">
+          <div slot="title">
+             Publisher Account
+          </div>
+          <div slot="actions">
+        
+          </div>
+          <div slot="footer">
+                <lightning-button 
+                variant="brand"
+                label="Get Records" 
+                onclick={handleClick} 
+              ></lightning-button>
+          </div>
+          <div>
+           <lightning-combobox
+             name="Rating"
+             label="Rating"
+             value={value}
+             placeholder="Select Rating"
+             options={options}
+             onchange={handleChange} 
+           ></lightning-combobox>
+
+           
+            
+          </div>
+        </lightning-card>
+    
+</template>

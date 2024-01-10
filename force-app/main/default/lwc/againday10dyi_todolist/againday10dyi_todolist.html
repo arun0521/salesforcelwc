@@ -1,0 +1,31 @@
+<template>
+
+        <lightning-card title="To Do List">
+
+                <template for:each={Todos} for:item="todo" >
+
+                        <div key={todo.id} >
+                                <lightning-layout class="slds-grid slds-gutters">
+                                        <div class="slds-col slds-size_8-of-12">
+                                        <lightning-layout-item>
+                                            <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">{todo.task}</div>
+                                        </lightning-layout-item>
+                                        </div>
+                                        <div class="slds-col slds-size_4-of-12 slds-p-left_large slds-p-top_small">
+                                        <lightning-layout-item>
+                                                <lightning-button-icon icon-name="utility:delete"  data-id={todo.id} alternative-text="Delete"   class="slds-m-left_xx-small" title="Delete" onclick={handledeleteclick}></lightning-button-icon>
+                                        </lightning-layout-item>
+                                </div>
+                                </lightning-layout>
+                        </div>
+
+                </template>
+                <div slot="footer">
+                        <lightning-input type="text" label="Enter Task" onchange={handlechange}></lightning-input>
+                        <lightning-button variant="brand" label="Add"  onclick={handleAdd}  class="slds-m-left_x-small"></lightning-button>
+                </div>
+
+
+        </lightning-card>
+    
+</template>

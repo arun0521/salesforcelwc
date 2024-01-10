@@ -1,0 +1,25 @@
+<template>
+
+        <lightning-card icon-name="standard:account" variant="base">
+          <div slot="title">
+              Related Contacts
+          </div>
+          <div slot="actions">
+        
+          </div>
+          <div slot="footer">
+        
+          </div>
+          <div>
+                <div style="height: 300px;">
+                        <lightning-datatable
+                                key-field="id"
+                                data={data}
+                                columns={columns}>
+                        </lightning-datatable>
+                    </div>
+            
+          </div>
+        </lightning-card>
+    
+</template>

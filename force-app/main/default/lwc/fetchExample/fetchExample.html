@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="Employee Database">
+        <div>
+
+            <lightning-layout vertical-align="start" multiple-rows="false" class="x-large">
+                <template for:each={employees} for:item="emp" onload={fetchData}>
+                    <lightning-layout-item padding="around-small" size="6" key={emp.id}>
+                        <img src={emp.picture} alt="emp pic" width="200" height="200">
+                        <lightning-layout-item padding="around-small" size="3" class="slds-m-left_xx-small">
+                            Name: {emp.firstName},
+                            Email: {emp.email}</br>
+                        </lightning-layout-item>
+                    </lightning-layout-item>
+                </template>
+            </lightning-layout>
+
+            <lightning-button label="load data" variant="brand" onclick={fetchData}></lightning-button>
+        </div>
+        <p slot="footer">
+            <lightning-layout pull-to-boundary="medium" class="x-large" horizontal-align="spread">
+                <template if:true={flag}>
+                    <lightning-layout-item padding="horizontal-medium" flexibility="grow">
+                        <lightning-input type="text" variant="label-hidden" class="searchName" label="search Name"
+                            placeholder="Enter the name..."></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-medium" flexibility="auto">
+                        <lightning-button variant="brand" label="Search" title="Add" onclick={handleSearch}
+                            class="slds-m-left_x-small"></lightning-button>
+                    </lightning-layout-item>
+                </template>
+                <template if:false={flag}>
+                    <lightning-layout-item padding="horizontal-medium" flexibility="auto">
+                        <lightning-button variant="brand" label="Prev" title="Prev" onclick={handlePrev}
+                            class="slds-m-left_x-small"></lightning-button>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-medium" flexibility="auto">
+                        <lightning-button variant="brand" label="Next" title="Next" onclick={handleNext}
+                            class="slds-m-left_x-small"></lightning-button>
+                    </lightning-layout-item>
+                </template>
+
+
+            </lightning-layout>
+        </p>
+
+    </lightning-card>
+
+</template>

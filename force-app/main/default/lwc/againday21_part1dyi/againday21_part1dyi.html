@@ -1,0 +1,36 @@
+<template>
+
+        <lightning-card title="PickList Based on Record Type">
+        <template if:true={options}>
+                <lightning-combobox
+                name="RecordType"
+                label="Select Record Type"
+                value={value}
+                placeholder=""
+                options={options}
+                onchange={handleChange} 
+              ></lightning-combobox>
+              
+
+        </template>   
+        
+        <template if:true={IndustryOptions}>
+                <lightning-combobox
+                  name="Industry"
+                  label="Industry"
+                  value={valueOfIndustry}
+                  placeholder="Select Industry"
+                  options={IndustryOptions}
+                  onchange={handleChangeIndustry} 
+                   
+                   
+                ></lightning-combobox>
+
+
+        </template>
+       
+
+
+        </lightning-card>
+    
+</template>
